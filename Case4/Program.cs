@@ -8,7 +8,7 @@ int[] A = new int[N];
 int index = 0;
 while(index < N)
 {
-    A[index] = new Random().Next(1, 10001);
+    A[index] = new Random().Next();
     index++;
 }
 foreach (var item in A) 
