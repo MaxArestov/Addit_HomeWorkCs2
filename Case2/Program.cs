@@ -9,16 +9,12 @@ int A = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int B = Convert.ToInt32(Console.ReadLine());
 bool check = CheckDev(A, B);
-if(check == true) Console.WriteLine("true");
+if (check == true) Console.WriteLine("true");
 else Console.WriteLine("false");
 
 
 
 bool CheckDev(int first, int second)
 {
-    if((first % second) == 0 || (B % A) == 0)
-    {
-        return true;
-    }
-    else return false;
+    return (first % second == 0 || second % first == 0);
 }
