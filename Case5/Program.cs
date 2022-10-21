@@ -1,16 +1,16 @@
 ﻿/* Написать программу которая сравнивает два массива. На вход пользователь заполняет два массива.
  Если каждый элемент массива равен каждому элементу второго массива вывести true, если хотя бы один не равен то вывести false. */
 Console.Clear();
-int N = 5;
-int[] A = new int[N];
-int[] B = new int[N];
-Console.WriteLine("Введите числа, относящиеся к массиву A, разделяя их клавишей Enter: ");
-FillArray(A);
-Console.WriteLine("Введите числа, относящиеся к массиву B, разделяя их клавишей Enter: ");
-FillArray(B);
-PrintArray(A);
-PrintArray(B);
-Console.WriteLine(A.SequenceEqual(B));
+int n = 5;
+int[] a = new int[n];
+int[] b = new int[n];
+Console.WriteLine("Введите числа, относящиеся к массиву a, разделяя их клавишей Enter: ");
+FillArray(a);
+Console.WriteLine("Введите числа, относящиеся к массиву b, разделяя их клавишей Enter: ");
+FillArray(b);
+PrintArray(a);
+PrintArray(b);
+Difference(a, b);
 
 
 
@@ -37,4 +37,9 @@ void FillArray(int[] array)
         array[index] = Convert.ToInt32(Console.ReadLine());
         index++;
     }
+}
+
+void Difference(int[] x, int[] y)
+{
+    Console.WriteLine(x.SequenceEqual(y));
 }
