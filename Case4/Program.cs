@@ -3,15 +3,42 @@
 Пример: Вввели 3 => 7, 4, 5 */
 Console.Clear();
 Console.Write("Введите количество чисел в массиве: ");
-int N = Convert.ToInt32(Console.ReadLine());
-int[] A = new int[N];
-int index = 0;
-while(index < N)
+int n = Convert.ToInt32(Console.ReadLine());
+int[] a = new int[n];
+FillArray(a);
+PrintArray(a);
+
+
+
+
+
+
+
+
+
+
+
+
+void FillArray(int[] array)
 {
-    A[index] = new Random().Next();
-    index++;
+    int length = array.Length;
+    int index = 0;
+    Random random = new Random();
+    while(index < length)
+    {
+        array[index] = random.Next(1, 1001);
+        index++;
+    }
 }
-foreach (var item in A) 
+
+void PrintArray(int[] mass)
 {
-    Console.WriteLine(item);
+    int line = mass.Length;
+    int count = 0;
+    Console.WriteLine("Элементы массива: ");
+    while (count < line)
+    {
+        Console.WriteLine(mass[count]);
+        count++;
+    }
 }
